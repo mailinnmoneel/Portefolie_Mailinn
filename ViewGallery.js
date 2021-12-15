@@ -1,24 +1,29 @@
 function viewGallery(){
 
     let html = `
-    <nav>
-        <li id="nav-li"onclick="home()"><a href="Home"></a>Home</li>
-        <li id="nav-li"><a href="GitHub"></a>GitHub</li>
-        <li id="nav-li" onclick="runGallery()"><a href="ArtGallery"></a>Art Gallery</li>
-        <li id="nav-li"><a href="About"></a>About</li>
-    </nav>
-    <header>
-        <h3 onclick="home()">Mailinn Moneel Kiste</h3>
-        <div class="container">${model.gallery[0].picture}</div>
-        <p id="bay-descripion">"Bay stallion" colored pencil on pastelmat</p>
-    </header>
-    <main class="gallery">
-    <ol id="gallery-alternatives">
-        <li class="galleryli" id="li-gallery" onclick="filterGallery('reset')"><a href="Gallery"></a>Gallery</li>
-        <li class="galleryli" onclick="filterGallery('horses')"><a href="Horses"></a>Horses</li>
-        <li class="galleryli" onclick="filterGallery('animals')"><a href="Animals"></a>Animals</li>
-    </ol>
-    <section class="gallery-grid">
+        <nav>
+            <li id="nav-li"onclick="home()"><a href="Home"></a>Home</li>
+            <li id="nav-li"><a href="GitHub"></a>GitHub</li>
+            <li id="nav-li" onclick="runGallery()"><a href="ArtGallery"></a>Art Gallery</li>
+            <li id="nav-li"><a href="About"></a>About</li>
+        </nav>
+        <header>
+            <h3 onclick="home()">Mailinn Moneel Kiste</h3>
+            <div class="container">
+                <picture>
+                    ${model.gallery[0].picture}
+                    <p id="bay-descripion">"Bay stallion" colored pencil on pastelmat</p>
+                </picture>    
+            </div>
+            
+        </header>
+        <main class="gallery">
+        <ol id="gallery-alternatives">
+            <li class="galleryli" id="li-gallery" onclick="filterGallery('reset')"><a href="Gallery"></a>Gallery</li>
+            <li class="galleryli" onclick="filterGallery('horses')"><a href="Horses"></a>Horses</li>
+            <li class="galleryli" onclick="filterGallery('animals')"><a href="Animals"></a>Animals</li>
+        </ol>
+        <section class="gallery-grid">
     
         `
         if(model.activepictures.length == 0){
@@ -40,8 +45,9 @@ function viewGallery(){
         }
         
     html += `
-    </section>
+        </section>
     </main>
+    
     <footer>
         <p id="mail">mailinn.kiste@gmail.com</p>
         <ol id="foot-ol">
