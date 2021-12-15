@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailinn Moneel Kiste</title>
+
+    <link rel="stylesheet/less" type="text/css" href="Less/home.Less" />
+    <link rel="stylesheet/less" type="text/css" href="Less/footer.Less" />
+    <link rel="stylesheet/less" type="text/css" href="Less/body+app.Less" />
+    <link rel="stylesheet/less" type="text/css" href="Less/nav.Less" />
+    <link rel="stylesheet/less" type="text/css" href="Less/gallery.Less" />
+
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="app"></div>
+    <script src="Model.js"></script>
+    <script src="ViewHome.js"></script>
+    <script src="ViewGallery.js"></script>
+    <script>
+    /*
+    Lørdag:  Research portefolier, finn inspirasjon til layout + galleri-ideer. Leke i figma. 
+    Mandag:  Bli ferdig med design i Figma. Lage view og legge bildene inn i modellen. 
+             Loope igjennom bildene i galleriet. Skriv en kort bio.  
+    Tirsdag: Filter funksjon galleri.
+    Onsdag:  CSS/Less.
+    Torsdag: Fikse fullsize modal.
+    Fredag:  CSS/Less
+    */
+
+    view();
+    function view(){
+        let html = "";
+        if(model.app.currentPage == "home") html = viewHome();
+        if(model.app.currentPage == "gallery") html = viewGallery();
+        document.getElementById("app").innerHTML = html;
+            
+    }
+    function runGallery(){
+        model.app.currentPage = "gallery";
+        view();
+    }
+    function home(){
+        model.app.currentPage = "home";
+        view();
+    }
+
+    </script>
+    
+</body>
+</html>
