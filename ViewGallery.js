@@ -18,11 +18,9 @@ function viewGallery(){
         </header>
         <div id="myModal" class="modal">
             <div class="modal-content>
-                <button class="close">Close</button>
+                <span class="close" onclick="closeModule()">Close</span>
                 <div class="activepicture">
-                    <picture>
-                        ${(model.activefullsize.length > 0 ? model.activefullsize[0] : "")}
-                    </picture>
+                    <picture>${(model.activefullsize.length > 0 ? model.activefullsize[0] : "")}</picture>
                 </div>
             </div>
         </div>
@@ -91,7 +89,7 @@ function filterGallery(tag){
     }
     view();
 }
-//activefullsize **** vi har lært å gi bedre navn på variabler etter dette, ikke spør =)
+//activefullsize
 function viewBigPicture(id){
     let activefullsize = null;
     let bigpicture; 
@@ -108,5 +106,14 @@ function viewBigPicture(id){
         model.activefullsize = [];
     }
     view();
+    openModule();
 }
-
+function openModule(){
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+function closeModule(){
+    let modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    view();
+}
