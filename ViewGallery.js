@@ -10,13 +10,20 @@ function viewGallery(){
         <header>
             <h3 onclick="home()">Mailinn Moneel Kiste</h3>
             <div class="container">
-                <picture>
+                <picture class="croppedImg">
                     ${model.gallery[0].picture}
                     <p id="bay-descripion">"Bay stallion" colored pencil on pastelmat</p>
                 </picture>    
             </div>
-            
         </header>
+        <div id="myModal" class="modal">
+            <div class="modal-content>
+                <span class="close" onclick="closeModule()">Close</span>
+                <div class="activepicture">
+                    <picture>${(model.activefullsize.length > 0 ? model.activefullsize[0] : "")}</picture>
+                </div>
+            </div>
+        </div>
         <main class="gallery">
         <ol id="gallery-alternatives">
             <li class="galleryli" id="li-gallery" onclick="filterGallery('reset')"><a href="Gallery"></a>Gallery</li>
@@ -29,17 +36,21 @@ function viewGallery(){
         if(model.activepictures.length == 0){
 
             for(var i = 1; i < model.gallery.length; i++){
-                
+
                 html+=`
-                <picture id="croppedImg">${model.gallery[i].picture}</picture>   
+                <picture class="croppedImg" id="${model.gallery[i].id}" 
+                    onclick="viewBigPicture(${model.gallery[i].id})"> ${model.gallery[i].picture}
+                </picture>  
                 `
             }
         }
         else{
             for(var i = 1; i < model.activepictures.length; i++){
-                
+
                 html+=`
-                <picture id="croppedImg">${model.activepictures[i].picture}</picture>
+                <picture class="croppedImg" id="${model.gallery[i].id}" 
+                    onclick="viewBigPicture(${model.gallery[i].id})"> ${model.activepictures[i].picture}
+                </picture>
                 `
             }
         }
@@ -66,7 +77,7 @@ function viewGallery(){
     `
     return html;
 }
-
+//activepicture
 function filterGallery(tag){
     model.activepictures = [];
     if(tag != "reset"){
@@ -78,4 +89,31 @@ function filterGallery(tag){
     }
     view();
 }
-
+//activefullsize
+function viewBigPicture(id){
+    let activefullsize = null;
+    let bigpicture; 
+    smolpicture = document.getElementById(id).innerHTML;
+    for(let p = 1; p < model.gallery.length; p++){
+        bigpicture = model.gallery[p];
+        
+        if( bigpicture.id == id){
+            activefullsize = bigpicture.fullsizeversion;
+            model.activefullsize[0] = activefullsize;
+        }
+    }
+    if(activefullsize == null){
+        model.activefullsize = [];
+    }
+    view();
+    openModule();
+}
+function openModule(){
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+function closeModule(){
+    let modal = document.getElementById("myModal");
+    modal.style.display = "none";
+    view();
+}
