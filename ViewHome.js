@@ -16,19 +16,16 @@ function viewHome(){
         <section>
             <h2>About</h2>
             <picture id="wip-bilde"><img style="height: 257px; width: 271px"src="Bilder/wip.jpg" alt="work in progress picture" ></picture>
-                <p id="bio">
-                    I was born with a passion for animals, nature and drawing which led me to a
-                    certificate of apprenticeship in agriculture from Holt high school and a
-                    bachelors degree in art at UIA, University in Kristiansand.</p>
-                <p id="bio">
-                    In my early twenties I discovered my love for gaming. Many nights was spent 
-                    sneaking around with a bow and arrow in skyrim or laughing and screaming with my 
-                    friends as we tried to outmanouver the enemy team.</p>
-                <p id="bio">    
-                    Long story short, I am now a happy student at GET Academy who loves to 
-                    learn, be creative, write code, design, and find new ways to solve problems.
-                </p>
-            </section>
+                <p id="bio">Mailinn loves creating beatutiful images and coming up with solutions for new designs. 
+                    She is residing in Skien, south in Norway, and is a student at GET Academy, where she studies 
+                    IT-development with languages like HTML, CSS, Javascript and C#.</p>
+                
+                <p id="bio">She was born with a passion for drawing animals and nature, and has a 
+                bachelors degree in art from UIA, University in Kristiansand.</p>
+                
+                <p id="bio">Mailinn hopes to help creating elegant and beautiful webpages and apps in the future.</p>
+                
+        </section>
         </main>
         <footer>
         <p id="mail">mailinn.kiste@gmail.com</p>
