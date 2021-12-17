@@ -14,7 +14,7 @@ function viewHome(){
         </header>
     <div class="row">    
         <main>
-        <section>
+            <section>
             <h2 id="About">About</h2>
             <picture id="wip-bilde"><img style="height: 257px; width: 271px"src="Bilder/wip.jpg" alt="work in progress picture" ></picture>
                 <p id="bio">Mailinn loves creating beatutiful images and coming up with solutions for new designs. 
@@ -25,7 +25,7 @@ function viewHome(){
                 bachelors degree in art from UIA, University in Kristiansand.</p>
                 
                 <p id="bio">Mailinn hopes to help creating elegant and beautiful webpages and apps in the future.</p>
-        </section>
+            </section>
         </main>
     </div>    
         <footer>

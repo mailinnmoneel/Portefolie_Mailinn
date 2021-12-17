@@ -25,7 +25,7 @@ nav li {
 nav li {
   float: left;
 }
-nav a:hover {
+nav li:hover {
   font-weight: bolder;
   cursor: pointer;
 }
@@ -57,7 +57,7 @@ main {
   flex: 80%; 
   background-color: #0A0E2C; 
   color: #E5E5E5;
-  padding: 20px; 
+  /* padding: 20px;  */
   text-align: center; 
 }
 section{
@@ -88,6 +88,33 @@ footer {
   text-align: center; 
   background-color: #6E3869;
   color: #FFFFFF;
+}
+#mail{
+  /* padding-top: 2rem; */
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+}
+#c-rights{
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+#foot-ol{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+}
+#foot-ol :hover{
+  opacity: 50%;
+  cursor: pointer;
+}
+i{
+  padding-right: 15px;
+  color: #E4A7DF;
 }
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {

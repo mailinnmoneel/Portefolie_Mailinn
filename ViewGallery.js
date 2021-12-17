@@ -27,7 +27,7 @@ function viewGallery(){
             </div>
         </div>
 
-        <div class="row>
+        <div class="row">  
             <main>
             <div class="gallery">
                 <ol id="gallery-alternatives">
@@ -35,7 +35,7 @@ function viewGallery(){
                 <li class="galleryli" onclick="filterGallery('horses')"><a href="Horses"></a>Horses</li>
                 <li class="galleryli" onclick="filterGallery('animals')"><a href="Animals"></a>Animals</li>
                 </ol>
-                <section class="gallery-grid">
+                <div class="gallery-grid">
         
         `
         if(model.activepictures.length == 0){
@@ -61,7 +61,7 @@ function viewGallery(){
         }
         
         html += `
-            </section>
+                </div>
             </div>
         </main>
     </div>
