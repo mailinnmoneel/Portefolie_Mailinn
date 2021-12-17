@@ -10,7 +10,7 @@ function viewHome(){
         <header>
             <h1>Mailinn Moneel Kiste</h1>
             <h4>Web developer student with an art & design background</h4>
-            <Picture id="profil-Bilde"><img style="height: 170px;" src="Bilder/bilde_Mailinn.PNG" alt="Profile picture"></Picture>
+            <Picture id="profil-Bilde"><img style="height: 170px;" src="Bilder/bilde_Mailinn.PNG"></Picture>
         </header>
         <main id="home-main">
         <section>

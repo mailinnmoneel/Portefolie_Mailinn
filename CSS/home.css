@@ -1,5 +1,6 @@
 header{
-    margin-top: 15rem;
+    margin-top: 10rem;
+    /* margin-top: 15%; */
 }
 h1{
     color: #E5E5E5;
@@ -8,6 +9,7 @@ h1{
     line-height: 130px;
     font-size: 130px;
     text-shadow: 0px 2px 2px #E4A7DF;
+    padding-top: 5rem;
 }
 h4{
     color: #E4A7DF;

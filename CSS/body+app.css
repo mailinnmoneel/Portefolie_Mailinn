@@ -4,7 +4,6 @@ body {
     min-height: 100vh;
     background-color: #0A0E2C;
     color: #E5E5E5;
-
     display: flex;
     flex-direction: column;
 }
@@ -14,7 +13,5 @@ body {
     background-color: #0A0E2C;
     color: #E5E5E5;
     font-family: 'Josefin Sans', sans-serif;
-    
     min-height: 100vh;
-
 }

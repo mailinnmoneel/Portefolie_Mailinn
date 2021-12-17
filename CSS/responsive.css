@@ -1,0 +1,17 @@
+/* Small screens, laptops */
+/* @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px){
+    h3 {
+      font-size: 20px;
+      left: 20px;
+      top: 10px;
+    }
+    .container {
+        margin-top: 0px;
+        width: 300px;
+    }
+    nav{
+        position: absolute;
+        right: 200px;
+        font-size: 5px;
+    }
+  } */
