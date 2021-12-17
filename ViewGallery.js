@@ -1,12 +1,13 @@
 function viewGallery(){
 
     let html = `
-        <nav>
-            <li id="nav-li"onclick="home()"><a href="Home"></a>Home</li>
-            <li id="nav-li"><a href="https://github.com/mailinnmoneel/" target="_blank">GitHub</a></li>
-            <li id="nav-li" onclick="runGallery()"><a href="ArtGallery"></a>Art Gallery</li>
-            <li id="nav-li"><a href="https://www.linkedin.com/in/mailinn-moneel-kiste-a523041b9/" target="_blank">Linkedin</a></li>
-        </nav>
+    <nav>
+        <li id="nav-li"onclick="home()"><a href="Home"></a>Home</li>
+        <li id="nav-li"><a href="https://github.com/mailinnmoneel/" target="_blank"></a>Github</li>
+        <li id="nav-li" onclick="runGallery()"><a href="ArtGallery"></a>Art Gallery</li>
+        <li id="nav-li"><a href="#About"></a>About</li>
+    </nav>
+
         <header>
             <h3 onclick="home()">Mailinn Moneel Kiste</h3>
             <div class="container">
@@ -16,6 +17,7 @@ function viewGallery(){
                 </picture>    
             </div>
         </header>
+        
         <div id="myModal" class="modal">
             <div class="modal-content>
                 <span class="close" onclick="closeModule()">Close</span>
@@ -24,40 +26,45 @@ function viewGallery(){
                 </div>
             </div>
         </div>
-        <main class="gallery">
-        <ol id="gallery-alternatives">
-            <li class="galleryli" id="li-gallery" onclick="filterGallery('reset')"><a href="Gallery"></a>Gallery</li>
-            <li class="galleryli" onclick="filterGallery('horses')"><a href="Horses"></a>Horses</li>
-            <li class="galleryli" onclick="filterGallery('animals')"><a href="Animals"></a>Animals</li>
-        </ol>
-        <section class="gallery-grid">
-    
+
+        <div class="row>
+            <main>
+            <div class="gallery">
+                <ol id="gallery-alternatives">
+                <li class="galleryli" id="li-gallery" onclick="filterGallery('reset')"><a href="Gallery"></a>Gallery</li>
+                <li class="galleryli" onclick="filterGallery('horses')"><a href="Horses"></a>Horses</li>
+                <li class="galleryli" onclick="filterGallery('animals')"><a href="Animals"></a>Animals</li>
+                </ol>
+                <section class="gallery-grid">
+        
         `
         if(model.activepictures.length == 0){
-
+            
             for(var i = 1; i < model.gallery.length; i++){
-
+                
                 html+=`
                 <picture class="croppedImg" id="${model.gallery[i].id}" 
-                    onclick="viewBigPicture(${model.gallery[i].id})"> ${model.gallery[i].picture}
+                onclick="viewBigPicture(${model.gallery[i].id})"> ${model.gallery[i].picture}
                 </picture>  
                 `
             }
         }
         else{
             for(var i = 1; i < model.activepictures.length; i++){
-
+                
                 html+=`
                 <picture class="croppedImg" id="${model.gallery[i].id}" 
-                    onclick="viewBigPicture(${model.gallery[i].id})"> ${model.activepictures[i].picture}
+                onclick="viewBigPicture(${model.gallery[i].id})"> ${model.activepictures[i].picture}
                 </picture>
                 `
             }
         }
         
-    html += `
-        </section>
-    </main>
+        html += `
+            </section>
+            </div>
+        </main>
+    </div>
     
     <footer>
         <p id="mail">mailinn.kiste@gmail.com</p>

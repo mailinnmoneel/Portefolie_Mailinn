@@ -1,0 +1,107 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #0A0E2C;
+  color: #E5E5E5;
+}
+#app{
+  padding: 0px;
+  margin: 0px;
+  min-height: 100vh;
+}
+nav {
+  overflow: hidden; 
+  float: right; 
+
+}
+nav li {
+  display: block; 
+  text-align: center; 
+  padding: 14px 20px;
+  color: #E4A7DF;
+  font-size: 19px;
+}
+nav li {
+  float: left;
+}
+nav a:hover {
+  font-weight: bolder;
+  cursor: pointer;
+}
+header {
+    padding: 80px; 
+    text-align: center; 
+  }
+  h1 {
+  color: #E5E5E5;
+  font-weight: 300;
+  font-size: 100px;
+  text-shadow: 0px 2px 2px #E4A7DF;
+}
+h4{
+  color: #E4A7DF;
+  font-size: 20px;
+  text-shadow: 0px 1px 1px #E4A7DF;
+}
+* {
+    box-sizing: border-box;
+  }
+  /* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  flex: 80%; 
+  background-color: #0A0E2C; 
+  color: #E5E5E5;
+  padding: 20px; 
+  text-align: center; 
+}
+section{
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+  margin-top: 10rem;
+  padding-bottom: 2px;
+  font-size: 70px;
+  border-bottom: 1px solid white;
+}
+#wip-bilde{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#bio{
+  padding-top: 0;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-style: normal;
+  font-size: 20px;
+  color: #E5E5E5;
+}
+footer {
+  padding: 20px;
+  text-align: center; 
+  background-color: #6E3869;
+  color: #FFFFFF;
+}
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  nav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+  
