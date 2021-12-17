@@ -3,17 +3,18 @@ function viewHome(){
     let html = `
         <nav>
             <li id="nav-li"onclick="home()"><a href="Home"></a>Home</li>
-            <li id="nav-li"><a href="https://github.com/mailinnmoneel/" target="_blank">GitHub</a></li>
+            <li id="nav-li"><a href="https://github.com/mailinnmoneel/" target="_blank"></a>Github</li>
             <li id="nav-li" onclick="runGallery()"><a href="ArtGallery"></a>Art Gallery</li>
-            <li id="nav-li"><a href="#About">About</a></li>
+            <li id="nav-li"><a href="#About"></a>About</li>
         </nav>
         <header>
             <h1>Mailinn Moneel Kiste</h1>
             <h4>Web developer student with an art & design background</h4>
-            <Picture id="profil-Bilde"><img style="height: 170px;" src="Bilder/bilde_Mailinn.PNG"></Picture>
+            <Picture id="profil-Bilde"><img style="height: 170px;" src="Bilder/bilde_Mailinn.png"></Picture>
         </header>
-        <main id="home-main">
-        <section>
+    <div class="row">    
+        <main>
+            <section>
             <h2 id="About">About</h2>
             <picture id="wip-bilde"><img style="height: 257px; width: 271px"src="Bilder/wip.jpg" alt="work in progress picture" ></picture>
                 <p id="bio">Mailinn loves creating beatutiful images and coming up with solutions for new designs. 
@@ -24,8 +25,9 @@ function viewHome(){
                 bachelors degree in art from UIA, University in Kristiansand.</p>
                 
                 <p id="bio">Mailinn hopes to help creating elegant and beautiful webpages and apps in the future.</p>
-        </section>
+            </section>
         </main>
+    </div>    
         <footer>
         <p id="mail">mailinn.kiste@gmail.com</p>
         <ol id="foot-ol">
